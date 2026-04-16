@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 230 25% 7%;
+    --foreground: 210 40% 92%;
+
+    --card: 230 30% 12%;
+    --card-foreground: 210 40% 92%;
+
+    --popover: 230 30% 12%;
+    --popover-foreground: 210 40% 92%;
+
+    --primary: 190 100% 50%;
+    --primary-foreground: 230 25% 7%;
+
+    --secondary: 270 60% 55%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 230 20% 18%;
+    --muted-foreground: 220 15% 55%;
+
+    --accent: 30 100% 55%;
+    --accent-foreground: 230 25% 7%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 230 20% 22%;
+    --input: 230 20% 22%;
+    --ring: 190 100% 50%;
+
+    --radius: 0.75rem;
+
+    --success: 150 100% 45%;
+    --success-foreground: 230 25% 7%;
+
+    --xp: 45 100% 55%;
+    --neon-glow: 190 100% 50%;
+    --neon-purple: 270 80% 60%;
+    --neon-green: 150 100% 50%;
+    --neon-orange: 30 100% 55%;
+
+    --font-display: 'Space Grotesk', sans-serif;
+    --font-body: 'Inter', sans-serif;
+
+    --sidebar-background: 230 30% 10%;
+    --sidebar-foreground: 210 40% 92%;
+    --sidebar-primary: 190 100% 50%;
+    --sidebar-primary-foreground: 230 25% 7%;
+    --sidebar-accent: 230 20% 18%;
+    --sidebar-accent-foreground: 210 40% 92%;
+    --sidebar-border: 230 20% 22%;
+    --sidebar-ring: 190 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+  .font-body {
+    font-family: var(--font-body);
+  }
+
+  .glow-cyan {
+    box-shadow: 0 0 15px hsl(var(--neon-glow) / 0.4), 0 0 30px hsl(var(--neon-glow) / 0.15);
+  }
+  .glow-purple {
+    box-shadow: 0 0 15px hsl(var(--neon-purple) / 0.4), 0 0 30px hsl(var(--neon-purple) / 0.15);
+  }
+  .glow-green {
+    box-shadow: 0 0 15px hsl(var(--neon-green) / 0.4), 0 0 30px hsl(var(--neon-green) / 0.15);
+  }
+  .glow-orange {
+    box-shadow: 0 0 15px hsl(var(--neon-orange) / 0.4), 0 0 30px hsl(var(--neon-orange) / 0.15);
+  }
+
+  .text-glow-cyan {
+    text-shadow: 0 0 10px hsl(var(--neon-glow) / 0.6), 0 0 20px hsl(var(--neon-glow) / 0.3);
+  }
+  .text-glow-purple {
+    text-shadow: 0 0 10px hsl(var(--neon-purple) / 0.6), 0 0 20px hsl(var(--neon-purple) / 0.3);
+  }
+
+  .card-glass {
+    background: hsl(var(--card) / 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid hsl(var(--border) / 0.5);
+  }
+
+  .rpg-box {
+    background: linear-gradient(135deg, hsl(230 30% 10% / 0.95), hsl(250 25% 15% / 0.9));
+    border: 2px solid hsl(var(--neon-glow) / 0.3);
+    box-shadow: inset 0 0 30px hsl(230 30% 5% / 0.5), 0 0 15px hsl(var(--neon-glow) / 0.1);
+  }
+
+  .progress-bar-glow {
+    background: linear-gradient(90deg, hsl(var(--neon-glow)), hsl(var(--neon-purple)));
+    box-shadow: 0 0 10px hsl(var(--neon-glow) / 0.5);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.animate-twinkle {
+  animation: twinkle 4s ease-in-out infinite;
+}
