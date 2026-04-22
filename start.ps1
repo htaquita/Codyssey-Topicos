@@ -11,7 +11,7 @@ Start-Sleep -Seconds 5
 Start-Process powershell -ArgumentList "-NoExit", "-Command", "cd '$PSScriptRoot\Frontend'; npm install --silent; npm run dev"
 
 Write-Host "Frontend iniciando..." -ForegroundColor Yellow
-Start-Sleep -Seconds 8
+Start-Sleep -Seconds 10
 
 Write-Host "Abrindo navegador..." -ForegroundColor Green
 Start-Process "http://localhost:8080"
