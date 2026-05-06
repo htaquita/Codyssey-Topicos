@@ -7,5 +7,7 @@
     "api/*.py": {
       "runtime": "python3.9"
     }
-  }
+  },
+  "buildCommand": "cd Frontend && npm install && npm run build",
+  "outputDirectory": "Frontend/dist"
 }
