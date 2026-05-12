@@ -36,6 +36,7 @@ const Landing = () => {
     setSubmitting(true);
     try {
       await register(name, email, password);
+      await login(email, password);
       toast({ title: "Conta criada!", description: "Bem-vindo ao Codyssey." });
       navigate("/dashboard");
     } catch (err: any) {

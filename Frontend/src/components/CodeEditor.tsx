@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Play, CheckCircle2, XCircle, RotateCcw, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import type { ChallengeData } from "@/data/challenges";
 import { checkExercise } from "@/lib/api";
+import { supabase } from "@/integrations/supabase/client";
 
 interface CodeEditorProps {
   challenge: ChallengeData;
@@ -15,6 +16,26 @@ const CodeEditor = ({ challenge, onSuccess }: CodeEditorProps) => {
   const [feedback, setFeedback] = useState("");
   const [output, setOutput] = useState("");
   const [loading, setLoading] = useState(false);
+  const startTimeRef = useRef<number>(Date.now());
+
+  // Reinicia o timer quando o desafio muda
+  useEffect(() => {
+    startTimeRef.current = Date.now();
+  }, [challenge.id]);
+
+  const saveAttempt = async (passed: boolean) => {
+    const { data: { user } } = await supabase.auth.getUser();
+    if (!user) return;
+
+    const timeSpent = Math.floor((Date.now() - startTimeRef.current) / 1000);
+
+    await supabase.from("challenge_attempts").insert({
+      user_id: user.id,
+      challenge_id: challenge.id,
+      passed,
+      time_spent: timeSpent,
+    });
+  };
 
   const handleRun = async () => {
     setLoading(true);
@@ -26,7 +47,10 @@ const CodeEditor = ({ challenge, onSuccess }: CodeEditorProps) => {
       setOutput(response.actual_output || "");
       setFeedback(response.feedback || "");
 
-      if (response.passed) {
+      const passed = response.passed;
+      await saveAttempt(passed);
+
+      if (passed) {
         setResult("success");
         onSuccess();
       } else {
@@ -45,6 +69,7 @@ const CodeEditor = ({ challenge, onSuccess }: CodeEditorProps) => {
     setResult("idle");
     setFeedback("");
     setOutput("");
+    startTimeRef.current = Date.now();
   };
 
   return (

@@ -43,7 +43,7 @@ const Challenge = () => {
         backgroundAttachment: "fixed",
       }}
     >
-      <div className="absolute inset-0 bg-background/88" />
+      <div className="absolute inset-0 bg-background/85" />
 
       <div className="relative z-10 max-w-5xl mx-auto px-4 py-6 space-y-6">
         <div className="flex items-center justify-between">
@@ -96,7 +96,7 @@ const Challenge = () => {
           </div>
 
           <div className="card-glass rounded-xl p-5">
-            <CodeEditor challenge={challenge} onSuccess={handleSuccess} />
+            <CodeEditor key={challenge.id} challenge={challenge} onSuccess={handleSuccess} />
           </div>
         </div>
       </div>

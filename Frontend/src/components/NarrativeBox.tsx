@@ -1,4 +1,4 @@
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, ChevronLeft } from "lucide-react";
 import { useState } from "react";
 
 interface NarrativeBoxProps {
@@ -9,6 +9,7 @@ interface NarrativeBoxProps {
 const NarrativeBox = ({ paragraphs, speaker = "COMANDANTE LYRA" }: NarrativeBoxProps) => {
   const [currentParagraph, setCurrentParagraph] = useState(0);
   const isLast = currentParagraph >= paragraphs.length - 1;
+  const isFirst = currentParagraph === 0;
 
   return (
     <div className="rpg-box rounded-xl p-5 space-y-3">
@@ -21,7 +22,18 @@ const NarrativeBox = ({ paragraphs, speaker = "COMANDANTE LYRA" }: NarrativeBoxP
         {paragraphs[currentParagraph]}
       </p>
 
-      <div className="flex justify-end">
+      <div className="flex justify-between items-center">
+        {!isFirst ? (
+          <button
+            onClick={() => setCurrentParagraph((p) => p - 1)}
+            className="flex items-center gap-1 text-xs font-display text-muted-foreground hover:text-primary transition-colors"
+          >
+            <ChevronLeft className="w-4 h-4" /> VOLTAR
+          </button>
+        ) : (
+          <span />
+        )}
+
         {!isLast ? (
           <button
             onClick={() => setCurrentParagraph((p) => p + 1)}

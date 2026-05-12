@@ -14,6 +14,33 @@ export type Database = {
   }
   public: {
     Tables: {
+      challenge_attempts: {
+        Row: {
+          id: string
+          user_id: string
+          challenge_id: number
+          passed: boolean
+          time_spent: number | null
+          attempted_at: string
+        }
+        Insert: {
+          id?: string
+          user_id: string
+          challenge_id: number
+          passed: boolean
+          time_spent?: number | null
+          attempted_at?: string
+        }
+        Update: {
+          id?: string
+          user_id?: string
+          challenge_id?: number
+          passed?: boolean
+          time_spent?: number | null
+          attempted_at?: string
+        }
+        Relationships: []
+      }
       profiles: {
         Row: {
           created_at: string
