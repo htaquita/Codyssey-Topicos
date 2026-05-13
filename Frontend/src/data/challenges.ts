@@ -130,7 +130,7 @@ if energia > 50 [insira operador lógico] codigo == "ARKONIS":
 else:
     print("Acesso negado!")`,
     validationKeywords: ["and", "print"],
-    expectedOutput: "abrir portal para ARKONIS",
+    expectedOutput: "Acesso permitido",
     successMessage: "A porta se abre! Bem-vindo a Arkonis, Explorador!",
     errorHint: "saída incorreta, verifique se ambas as condições estão corretas e use 'and' para combiná-las.",
   },
