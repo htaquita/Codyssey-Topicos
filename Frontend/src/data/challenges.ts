@@ -178,6 +178,7 @@ else:
     hint: "Use while com um contador: while disparos < 5: print(...) e disparos += 1",
     initialCode: `# Estabilize a órbita!
 # Dispare os propulsores 5 vezes
+# utilize o formato print(f"...{...}")
 
 disparos = 0
 
