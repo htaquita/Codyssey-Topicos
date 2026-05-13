@@ -39,7 +39,7 @@ class handler(BaseHTTPRequestHandler):
                 "passed": passed,
                 "actual_output": actual,
                 "expected_output": expected,
-                "feedback": "Correto!" if passed else f"Esperado: '{expected}', mas recebeu: '{actual}'"
+                "feedback": "Correto!" if passed else "Sinal não reconhecido. Revise sua lógica e tente novamente, Explorador."
             }
         
         self.send_response(200)

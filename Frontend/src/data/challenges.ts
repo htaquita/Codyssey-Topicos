@@ -49,7 +49,7 @@ if sinal == "amigável":
     validationKeywords: ["print"],
     expectedOutput: "amigável",
     successMessage: "Sinal recebido! A civilização respondeu com uma saudação!",
-    errorHint: "Dica: use print(\"amigável\") dentro do bloco if.",
+    errorHint: "saída incorreta, tente a mensagem (amigável) ",
   },
   {
     id: 2,
@@ -58,25 +58,25 @@ if sinal == "amigável":
     xpReward: 120,
     storyParagraphs: [
       "A nave se aproxima de uma nebulosa densa. Os sensores detectam duas rotas possíveis: uma segura e outra perigosa.",
-      "Você precisa programar o sistema de navegação para escolher a rota correta. Se a rota for 'segura', avance. Caso contrário, recue.",
+      "Você precisa programar o sistema de navegação para escolher a rota correta. Se a rota for 'segura', 'avance'. Caso contrário, recue.",
       "Use if e else para criar a lógica de decisão!",
     ],
     hint: "Em Python, if/else permite escolher entre dois caminhos: if condição: ... else: ...",
     initialCode: `# Programe o sistema de navegação
 # Use if/else para decidir a rota
 
-rota = "segura"
+rota = [insira rota apropriada]
 
 if rota == "segura":
     # O que fazer se for segura?
     
-else:
-    # O que fazer se não for?
+[insira else aqui, não se esqueça dos dois pontos!]
+    print("rota perigosa, recuando!")
     `,
     validationKeywords: ["print", "else"],
-    expectedOutput: "Avançando pela rota segura!",
+    expectedOutput: "rota segura, avançar",
     successMessage: "Navegação configurada! A nave segue pela rota segura!",
-    errorHint: "Dica: use print(\"Avançando pela rota segura!\") no bloco if.",
+    errorHint: "saída incorreta, tente a mensagem (rota segura, e ação a ser feita) no bloco if.",
   },
   {
     id: 3,
@@ -84,7 +84,7 @@ else:
     title: "Caminhos Estelares",
     xpReward: 140,
     storyParagraphs: [
-      "Três portais apareceram diante da nave: o Portal Azul leva a uma estação de combustível, o Portal Vermelho a um campo de asteroides, e o Portal Verde a um planeta habitável.",
+      "Três portais apareceram diante da nave: o 'Portal Azul' leva a uma estação de combustível, o 'Portal Vermelho' a um campo de asteroides, e o 'Portal Verde' a um planeta habitável.",
       "Você deve programar o computador de bordo para escolher o portal correto baseado na cor detectada.",
       "Use if, elif e else para cobrir todas as possibilidades!",
     ],
@@ -94,18 +94,18 @@ else:
 
 cor_portal = "verde"
 
-if cor_portal == "azul":
+if cor_portal == [insira cor apropriada]:
     print("Rumo à estação de combustível!")
-elif cor_portal == "verde":
+[insira elif e condição aqui!]
     # O que acontece no portal verde?
-    
+
 else:
-    # E se for outro portal?
+    print("Rumo ao campo de asteroides, cuidado!")
     `,
     validationKeywords: ["elif", "print"],
     expectedOutput: "Rumo ao planeta habitável!",
     successMessage: "Portal selecionado! O planeta habitável nos espera!",
-    errorHint: "Dica: use print(\"Rumo ao planeta habitável!\") no bloco elif.",
+    errorHint: "saída incorreta, utilize as outras mensagens para escolher o portal correto",
   },
   {
     id: 4,
@@ -113,7 +113,7 @@ else:
     title: "O Guardião da Porta",
     xpReward: 150,
     storyParagraphs: [
-      "O Guardião da Porta Estelar de Arkonis exige duas verificações: o nível de energia deve ser maior que 50 E o código de acesso deve ser 'ARKONIS'.",
+      "O Guardião da Porta Estelar de Arkonis exige duas verificações: o nível de energia deve ser 'maior que 50' E o código de acesso deve ser 'ARKONIS'.",
       "Apenas quando ambas as condições forem verdadeiras, a porta se abrirá.",
       "Use operadores lógicos para combinar as condições!",
     ],
@@ -121,18 +121,18 @@ else:
     initialCode: `# Passe pela porta de Arkonis
 # Ambas condições devem ser verdadeiras
 
-energia = 75
-codigo = "ARKONIS"
+energia = [insira valor de energia apropriado]
+codigo = [insira código apropriado]
 
-if energia > 50 and codigo == "ARKONIS":
+if energia > 50 [insira operador lógico] codigo == "ARKONIS":
     # O que acontece quando a porta abre?
     
 else:
     print("Acesso negado!")`,
     validationKeywords: ["and", "print"],
-    expectedOutput: "Porta aberta! Bem-vindo a Arkonis!",
+    expectedOutput: "abrir portal para ARKONIS",
     successMessage: "A porta se abre! Bem-vindo a Arkonis, Explorador!",
-    errorHint: "Dica: use print(\"Porta aberta! Bem-vindo a Arkonis!\") no bloco if.",
+    errorHint: "saída incorreta, verifique se ambas as condições estão corretas e use 'and' para combiná-las.",
   },
   {
     id: 5,
@@ -140,7 +140,7 @@ else:
     title: "Labirinto Binário",
     xpReward: 180,
     storyParagraphs: [
-      "Você entrou no Labirinto Binário, onde cada sala tem um número. Salas pares são seguras, salas ímpares são armadilhas.",
+      "Você entrou no Labirinto Binário, onde cada sala tem um número. Salas 'pares' são seguras, salas 'ímpares' são armadilhas.",
       "Além disso, se o número da sala for maior que 100, há um tesouro escondido!",
       "Crie uma lógica com condições aninhadas para verificar se a sala é par E se contém um tesouro.",
     ],
@@ -150,18 +150,18 @@ else:
 
 sala = 102
 
-if sala % 2 == 0:
+if [insiração vericação para sala par]
     print("Sala segura!")
-    if sala > 100:
-        # O que fazer quando achar o tesouro?
+    if sala > [insira numero da sala do tesouro]:
+        # O que foi encontrado na sala?
         
 else:
     # O que acontece em salas ímpares?
     `,
     validationKeywords: ["print", "% 2"],
-    expectedOutput: "Sala segura!\nTesouro encontrado!",
+    expectedOutput: "Sala segura!\nTesouro encontrado",
     successMessage: "Labirinto conquistado! Tesouro coletado na sala 102!",
-    errorHint: "Dica: use print(\"Tesouro encontrado!\") no if aninhado e print(\"Armadilha!\") no else.",
+    errorHint: "saída incorreta, verifique se a sala é par usando % 2 e se o número é maior que 100 para encontrar o tesouro.",
   },
 
   // === MODULE 2: LAÇOS DE REPETIÇÃO ===
@@ -181,14 +181,14 @@ else:
 
 disparos = 0
 
-while disparos < 5:
+while disparos < [insira número de disparos]:
     # Dispare o propulsor e atualize o contador
-    
+    #atualzie o numero de disparos aqui
     `,
     validationKeywords: ["print", "+="],
     expectedOutput: "Disparo 1\nDisparo 2\nDisparo 3\nDisparo 4\nDisparo 5",
     successMessage: "Órbita estabilizada! 5 disparos executados com precisão!",
-    errorHint: "Dica: use print(f\"Disparo {disparos + 1}\") e depois disparos += 1.",
+    errorHint: "saída incorreta, lembre-se de incrementar o contador de disparos dentro do loop para evitar um loop infinito.",
   },
   {
     id: 7,
@@ -196,21 +196,21 @@ while disparos < 5:
     title: "Ciclo das Estrelas",
     xpReward: 160,
     storyParagraphs: [
-      "O telescópio de bordo detectou uma sequência de 7 estrelas. Você precisa catalogar cada uma delas.",
+      "O telescópio de bordo detectou uma sequência de '7 estrelas'. Você precisa catalogar cada uma delas.",
       "Use um laço for com range() para percorrer todas as estrelas e registrar suas posições.",
       "O catálogo estelar da nave será atualizado automaticamente!",
     ],
-    hint: "Use for com range: for i in range(7): print(f\"Estrela {i + 1}\")",
+    hint: "Use for com range: for i in range(): print(f\"Estrela {i + 1}\")",
     initialCode: `# Catalogue as 7 estrelas detectadas
 # Use um laço for com range()
 
-for i in range(7):
+for i in range([insira número de estrelas]):
     # Registre cada estrela
     `,
     validationKeywords: ["print", "range"],
     expectedOutput: "Estrela 1\nEstrela 2\nEstrela 3\nEstrela 4\nEstrela 5\nEstrela 6\nEstrela 7",
     successMessage: "Catálogo estelar atualizado! 7 estrelas registradas!",
-    errorHint: "Dica: use print(f\"Estrela {i + 1}\") dentro do for.",
+    errorHint: "saída incorreta, lembre-se de usar range(7) para percorrer as 7 estrelas e imprimir suas posições corretamente.",
   },
   {
     id: 8,
@@ -218,22 +218,22 @@ for i in range(7):
     title: "Padrão Galáctico",
     xpReward: 180,
     storyParagraphs: [
-      "Os cientistas da nave descobriram um padrão em uma grade 3x3 de sinais cósmicos. Cada célula emite um pulso.",
+      "Os cientistas da nave descobriram um padrão em uma 'grade 3x3' de sinais cósmicos. Cada célula emite um pulso.",
       "Você precisa usar laços aninhados para varrer toda a grade e ler cada sinal.",
       "Um laço para as linhas e outro para as colunas — é a forma de mapear o padrão completo!",
     ],
-    hint: "Laços aninhados: for linha in range(3): for coluna in range(3): print(f\"Sinal [{linha}][{coluna}]\")",
+    hint: "Laços aninhados: for linha in range(): for coluna in range(): print(f\"Sinal [{linha}][{coluna}]\")",
     initialCode: `# Varra a grade 3x3 de sinais
 # Use laços aninhados (for dentro de for)
 
-for linha in range(3):
-    for coluna in range(3):
+for linha in range([insira número de linhas]):
+    [insira laço para colunas aqui]:
         # Leia o sinal em cada posição
         `,
     validationKeywords: ["print", "for", "range"],
     expectedOutput: "Sinal [0][0]\nSinal [0][1]\nSinal [0][2]\nSinal [1][0]\nSinal [1][1]\nSinal [1][2]\nSinal [2][0]\nSinal [2][1]\nSinal [2][2]",
     successMessage: "Padrão decodificado! Todos os 9 sinais foram mapeados!",
-    errorHint: "Dica: use print(f\"Sinal [{linha}][{coluna}]\") dentro dos dois fors.",
+    errorHint: "saída incorreta, lembre-se de usar dois laços for para percorrer as linhas e colunas da grade 3x3 e imprimir cada sinal corretamente.",
   },
   {
     id: 9,
@@ -243,7 +243,7 @@ for linha in range(3):
     storyParagraphs: [
       "O motor de dobra precisa carregar energia. A cada ciclo, a energia aumenta em 15 unidades.",
       "Quando a energia atingir 100 ou mais, o motor está pronto e você deve parar o carregamento com break.",
-      "Sem o break, o motor pode sobrecarregar e explodir!",
+      "Sem o 'break', o motor pode sobrecarregar e explodir!",
     ],
     hint: "Use while True: com uma condição if para dar break quando energia >= 100.",
     initialCode: `# Carregue o motor de dobra
@@ -254,13 +254,13 @@ energia = 0
 while True:
     energia += 15
     print(f"Energia: {energia}")
-    if energia >= 100:
+    if [insira condição de parada aqui]:
         # Pare o carregamento!
         `,
     validationKeywords: ["break", "print"],
     expectedOutput: "Energia: 15\nEnergia: 30\nEnergia: 45\nEnergia: 60\nEnergia: 75\nEnergia: 90\nEnergia: 105",
     successMessage: "Motor de dobra carregado! Pronto para o salto hiperespacial!",
-    errorHint: "Dica: use break dentro do if para parar o loop quando a energia for suficiente.",
+    errorHint: "saída incorreta, lembre-se de usar break para parar o loop quando a energia atingir 100 ou mais, evitando um loop infinito.",
   },
 
   // === MODULE 3: FUNÇÕES ===
@@ -271,10 +271,10 @@ while True:
     xpReward: 180,
     storyParagraphs: [
       "A nave precisa de um módulo de comando reutilizável. Em vez de repetir código, crie uma função que pode ser chamada sempre que necessário.",
-      "Defina uma função chamada saudacao() que imprime uma mensagem de boas-vindas ao tripulante.",
+      "Defina uma função chamada saudacao() que imprime uma mensagem de 'boas-vindas ao tripulante'.",
       "Depois de definir, chame a função para testá-la!",
     ],
-    hint: "Defina com def saudacao(): e dentro use print(\"Bem-vindo, tripulante!\"). Depois chame: saudacao()",
+    hint: "Defina com def saudacao(): e dentro use print(\"boas-vindas ao tripulante\"). Depois chame: saudacao()",
     initialCode: `# Crie o módulo de comando
 # Defina e chame uma função
 
@@ -285,9 +285,9 @@ def saudacao():
 # Chame a função aqui
 `,
     validationKeywords: ["def", "print", "saudacao()"],
-    expectedOutput: "Bem-vindo, tripulante!",
+    expectedOutput: "boas-vindas ao tripulante",
     successMessage: "Módulo de comando instalado! Função operacional!",
-    errorHint: "Dica: use print(\"Bem-vindo, tripulante!\") dentro da função e chame saudacao() no final.",
+    errorHint: "saída incorreta, lembre-se de definir a função saudacao() com a mensagem correta e chamá-la para ver a mensagem.",
   },
   {
     id: 11,
@@ -307,13 +307,12 @@ def protocolo(planeta):
     # Envie uma saudação ao planeta
     
 
-# Teste com diferentes planetas
-protocolo("Marte")
+# Teste para o planeta Marte
 `,
     validationKeywords: ["def", "print", "planeta"],
     expectedOutput: "Saudações ao planeta Marte!",
     successMessage: "Protocolo ativo! Comunicação estabelecida com sucesso!",
-    errorHint: "Dica: use print(f\"Saudações ao planeta {planeta}!\") dentro da função.",
+    errorHint: "saída incorreta, lembre-se de usar print(f\"Saudações ao planeta {planeta}!\") dentro da função.",
   },
   {
     id: 12,
@@ -322,7 +321,7 @@ protocolo("Marte")
     xpReward: 250,
     storyParagraphs: [
       "Para a viagem de volta, o computador precisa calcular o combustível necessário. Crie uma função que receba a distância e retorne a quantidade de combustível.",
-      "A fórmula é simples: combustível = distância * 0.5. Use return para devolver o resultado.",
+      "A fórmula é simples: 'combustível = distância * 0.5'. Use return para devolver o resultado.",
       "Este é o desafio final da sua odisseia. Mostre que você domina funções com retorno!",
     ],
     hint: "Use return para devolver valores: def calcular_combustivel(distancia): return distancia * 0.5",
@@ -330,7 +329,7 @@ protocolo("Marte")
 # Use return para retornar o resultado
 
 def calcular_combustivel(distancia):
-    # Calcule e retorne o combustível
+    # insira fórmula de retorno aqui
     
 
 # Teste a função
@@ -340,7 +339,7 @@ print(f"Combustível necessário: {resultado}")
     validationKeywords: ["def", "return", "distancia"],
     expectedOutput: "Combustível necessário: 100.0",
     successMessage: "Cálculo perfeito! A nave tem combustível para voltar! Parabéns, Explorador, sua odisseia está completa!",
-    errorHint: "Dica: use return distancia * 0.5 dentro da função.",
+    errorHint: "saída incorreta, retorne a formula correta dentro da função e teste com a distância fornecida.",
   },
 ];
 
