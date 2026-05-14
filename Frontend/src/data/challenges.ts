@@ -64,17 +64,18 @@ if sinal == "amigável":
     hint: "Em Python, if/else permite escolher entre dois caminhos: if condição: ... else: ...",
     initialCode: `# Programe o sistema de navegação
 # Use if/else para decidir a rota
+# atenção: não remova as aspas da rota = ...
 
-rota = [insira rota apropriada]
+rota = "[insira rota apropriada]"
 
 if rota == "segura":
     # O que fazer se for segura?
     
 [insira else aqui, não se esqueça dos dois pontos!]
-    print("rota perigosa, recuando!")
+    print("rota perigosa, recue")
     `,
     validationKeywords: ["print", "else"],
-    expectedOutput: "rota segura, avançar",
+    expectedOutput: "rota segura, avance",
     successMessage: "Navegação configurada! A nave segue pela rota segura!",
     errorHint: "saída incorreta, tente a mensagem (rota segura, e ação a ser feita) no bloco if.",
   },
@@ -95,15 +96,15 @@ if rota == "segura":
 cor_portal = "verde"
 
 if cor_portal == [insira cor apropriada]:
-    print("Rumo à estação de combustível!")
-[insira elif e condição aqui!]
+    print("Rumo à estação de combustível")
+[insira elif e condição aqui]
     # O que acontece no portal verde?
 
 else:
     print("Rumo ao campo de asteroides, cuidado!")
     `,
     validationKeywords: ["elif", "print"],
-    expectedOutput: "Rumo ao planeta habitável!",
+    expectedOutput: "Rumo ao planeta habitável",
     successMessage: "Portal selecionado! O planeta habitável nos espera!",
     errorHint: "saída incorreta, utilize as outras mensagens para escolher o portal correto",
   },
@@ -115,11 +116,12 @@ else:
     storyParagraphs: [
       "O Guardião da Porta Estelar de Arkonis exige duas verificações: o nível de energia deve ser 'maior que 50' E o código de acesso deve ser 'ARKONIS'.",
       "Apenas quando ambas as condições forem verdadeiras, a porta se abrirá.",
-      "Use operadores lógicos para combinar as condições!",
+      "Use operadores lógicos para combinar as condições e 'permitir' o acesso",
     ],
     hint: "Em Python, use 'and' para combinar condições: if condição1 and condição2:",
     initialCode: `# Passe pela porta de Arkonis
 # Ambas condições devem ser verdadeiras
+# Atenção o código deve estar em maiúsculo
 
 energia = [insira valor de energia apropriado]
 codigo = [insira código apropriado]
@@ -151,15 +153,15 @@ else:
 sala = 102
 
 if [insiração vericação para sala par]
-    print("Sala segura!")
+    # que tipo de sala é?
     if sala > [insira numero da sala do tesouro]:
-        # O que foi encontrado na sala?
+        print("Tesouro encontrado")
         
 else:
-    # O que acontece em salas ímpares?
+    print("Sala com armadilhas")
     `,
     validationKeywords: ["print", "% 2"],
-    expectedOutput: "Sala segura!\nTesouro encontrado",
+    expectedOutput: "Sala segura\nTesouro encontrado",
     successMessage: "Labirinto conquistado! Tesouro coletado na sala 102!",
     errorHint: "saída incorreta, verifique se a sala é par usando % 2 e se o número é maior que 100 para encontrar o tesouro.",
   },
@@ -175,10 +177,10 @@ else:
       "Use um laço while para disparar os propulsores até atingir o número correto de disparos.",
       "Cuidado: não esqueça de incrementar o contador ou ficará preso em uma órbita infinita!",
     ],
-    hint: "Use while com um contador: while disparos < 5: print(...) e disparos += 1",
+    hint: "Use while com um contador: while disparos < 5: print(f\"...{...}\") e disparos += 1",
     initialCode: `# Estabilize a órbita!
-# Dispare os propulsores 5 vezes
-# utilize o formato print(f"...{...}")
+# Dispare os propulsores 5 vezes, lembre-se que disparos começam contando do 0
+# Atenção separe o Disparo do seu número por espaçamento
 
 disparos = 0
 
@@ -201,7 +203,7 @@ while disparos < [insira número de disparos]:
       "Use um laço for com range() para percorrer todas as estrelas e registrar suas posições.",
       "O catálogo estelar da nave será atualizado automaticamente!",
     ],
-    hint: "Use for com range: for i in range(): print(f\"Estrela {i + 1}\")",
+    hint: "Use for com range: for i in range(): print(f\"... {i + 1}\")",
     initialCode: `# Catalogue as 7 estrelas detectadas
 # Use um laço for com range()
 
@@ -220,10 +222,10 @@ for i in range([insira número de estrelas]):
     xpReward: 180,
     storyParagraphs: [
       "Os cientistas da nave descobriram um padrão em uma 'grade 3x3' de sinais cósmicos. Cada célula emite um pulso.",
-      "Você precisa usar laços aninhados para varrer toda a grade e ler cada sinal.",
-      "Um laço para as linhas e outro para as colunas — é a forma de mapear o padrão completo!",
+      "Você precisa usar laços aninhados para varrer toda a grade e ler cada 'Sinal'.",
+      "Um laço para as 'linhas' e outro para as 'colunas' — é a forma de mapear o padrão completo!",
     ],
-    hint: "Laços aninhados: for linha in range(): for coluna in range(): print(f\"Sinal [{linha}][{coluna}]\")",
+    hint: "Laços aninhados: for linha in range(): for coluna in range(): print(f\"Sinal [{...}][{...}]\")",
     initialCode: `# Varra a grade 3x3 de sinais
 # Use laços aninhados (for dentro de for)
 
@@ -246,7 +248,7 @@ for linha in range([insira número de linhas]):
       "Quando a energia atingir 100 ou mais, o motor está pronto e você deve parar o carregamento com break.",
       "Sem o 'break', o motor pode sobrecarregar e explodir!",
     ],
-    hint: "Use while True: com uma condição if para dar break quando energia >= 100.",
+    hint: "Use while True: com uma condição if para dar break quando energia >= ...",
     initialCode: `# Carregue o motor de dobra
 # Pare com break ao atingir 100 de energia
 
@@ -275,7 +277,7 @@ while True:
       "Defina uma função chamada saudacao() que imprime uma mensagem de 'boas-vindas ao tripulante'.",
       "Depois de definir, chame a função para testá-la!",
     ],
-    hint: "Defina com def saudacao(): e dentro use print(\"boas-vindas ao tripulante\"). Depois chame: saudacao()",
+    hint: "Defina com def saudacao(): e dentro imprima a mensagem correta Depois chame a função",
     initialCode: `# Crie o módulo de comando
 # Defina e chame uma função
 
@@ -297,10 +299,10 @@ def saudacao():
     xpReward: 200,
     storyParagraphs: [
       "Cada planeta requer um protocolo de comunicação personalizado. Crie uma função que receba o nome do planeta como parâmetro.",
-      "A função deve imprimir uma mensagem de saudação específica para aquele planeta.",
+      "A função deve imprimir a mensagem 'Saudação ao planeta [nome do planeta]'.",
       "Teste chamando a função com diferentes nomes de planetas!",
     ],
-    hint: "Use parâmetros: def protocolo(planeta): print(f\"Saudações ao planeta {planeta}!\") e chame: protocolo('Marte')",
+    hint: "Use parâmetros: def protocolo(planeta): print(f\"... {planeta}\") e depois chame a função para o planeta Marte",
     initialCode: `# Crie o protocolo de comunicação
 # A função deve receber o nome do planeta
 
@@ -311,9 +313,9 @@ def protocolo(planeta):
 # Teste para o planeta Marte
 `,
     validationKeywords: ["def", "print", "planeta"],
-    expectedOutput: "Saudações ao planeta Marte!",
+    expectedOutput: "Saudações ao planeta Marte",
     successMessage: "Protocolo ativo! Comunicação estabelecida com sucesso!",
-    errorHint: "saída incorreta, lembre-se de usar print(f\"Saudações ao planeta {planeta}!\") dentro da função.",
+    errorHint: "saída incorreta, lembre-se de usar print(f\"Saudações ao planeta {planeta}\") dentro da função.",
   },
   {
     id: 12,
@@ -330,7 +332,7 @@ def protocolo(planeta):
 # Use return para retornar o resultado
 
 def calcular_combustivel(distancia):
-    # insira fórmula de retorno aqui
+    # retorne a fórmula de retorno aqui
     
 
 # Teste a função
