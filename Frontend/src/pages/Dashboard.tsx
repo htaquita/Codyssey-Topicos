@@ -32,7 +32,7 @@ const Dashboard = () => {
           <div className="flex items-center gap-3">
             <Rocket className="w-8 h-8 text-primary animate-float" />
             <h1 className="font-display text-2xl tracking-[0.15em] text-foreground text-glow-cyan">
-              CODYSSEY
+              CodeSideral
             </h1>
           </div>
           <Button variant="ghost" size="sm" className="gap-2 text-muted-foreground hover:text-foreground" onClick={handleLogout}>
