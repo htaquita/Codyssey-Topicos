@@ -56,7 +56,7 @@ const Challenge = () => {
           </button>
           <div className="flex items-center gap-2">
             <Rocket className="w-5 h-5 text-primary" />
-            <span className="font-display text-sm tracking-wider text-foreground">CODYSSEY</span>
+            <span className="font-display text-sm tracking-wider text-foreground">CodeSideral</span>
           </div>
         </div>
 
