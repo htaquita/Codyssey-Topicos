@@ -37,7 +37,7 @@ const Landing = () => {
     try {
       await register(name, email, password);
       await login(email, password);
-      toast({ title: "Conta criada!", description: "Bem-vindo ao Codyssey." });
+      toast({ title: "Conta criada!", description: "Bem-vindo ao CodeSideral." });
       navigate("/dashboard");
     } catch (err: any) {
       setError(err.message || "Erro ao criar conta.");
@@ -104,7 +104,7 @@ const Landing = () => {
       <header className="relative z-10 w-full flex items-center justify-between px-6 py-4">
         <div className="flex items-center gap-3">
           <Rocket className="w-8 h-8 text-primary animate-float" />
-          <span className="font-display text-xl tracking-[0.12em] text-foreground text-glow-cyan">CODYSSEY</span>
+          <span className="font-display text-xl tracking-[0.12em] text-foreground text-glow-cyan">CodeSideral</span>
         </div>
         {mode === "info" && (
           <div className="flex items-center gap-3">
@@ -128,7 +128,7 @@ const Landing = () => {
           <div className="space-y-8 animate-fade-in">
             <div className="text-center mb-6">
               <h1 className="font-display text-4xl md:text-5xl tracking-[0.12em] text-foreground text-glow-cyan mb-3">
-                CODYSSEY
+                CodeSideral
               </h1>
               <p className="font-body text-muted-foreground text-lg max-w-xl mx-auto">
                 Sua odisseia pela lógica de programação começa aqui.
@@ -187,7 +187,7 @@ const Landing = () => {
                 )}
                 <div className="space-y-2">
                   <label className="font-body text-sm text-muted-foreground">Email</label>
-                  <Input type="email" placeholder="explorador@codyssey.com" value={email} onChange={(e) => { setEmail(e.target.value); setError(""); }} className="bg-muted/50 border-muted-foreground/20 text-foreground placeholder:text-muted-foreground/50" />
+                  <Input type="email" placeholder="explorador@CodeSideral.com" value={email} onChange={(e) => { setEmail(e.target.value); setError(""); }} className="bg-muted/50 border-muted-foreground/20 text-foreground placeholder:text-muted-foreground/50" />
                 </div>
                 <div className="space-y-2">
                   <label className="font-body text-sm text-muted-foreground">Senha</label>
