@@ -1,4 +1,4 @@
-# 🚀 Codyssey — A Logic Quest
+# 🚀 CodeSideral — A Logic Quest
 
 > Plataforma gamificada de exercícios de Python com temática espacial, desenvolvida como projeto acadêmico.
 
@@ -6,7 +6,7 @@
 
 ## 📖 Sobre o Projeto
 
-Codyssey é uma plataforma web educacional que ensina lógica de programação em Python através de uma narrativa espacial imersiva. O aluno assume o papel de um explorador intergaláctico e avança por desafios de código para progredir na missão.
+CodeSideral é uma plataforma web educacional que ensina lógica de programação em Python através de uma narrativa espacial imersiva. O aluno assume o papel de um explorador intergaláctico e avança por desafios de código para progredir na missão.
 
 A plataforma foi desenvolvida com foco em engajamento e aprendizado ativo, onde cada exercício é contextualizado dentro de uma história e fornece feedback imediato sobre o código submetido.
 
