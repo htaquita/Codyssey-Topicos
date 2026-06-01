@@ -1,5 +1,5 @@
-# Codyssey - Script de inicializacao local
-Write-Host "Iniciando Codyssey..." -ForegroundColor Cyan
+# CodeSideral - Script de inicializacao local
+Write-Host "Iniciando CodeSideral..." -ForegroundColor Cyan
 
 Start-Process powershell -ArgumentList "-NoExit", "-Command", "cd '$PSScriptRoot\Frontend'; npm install --silent; npm run dev"
 
